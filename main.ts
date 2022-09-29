@@ -1,9 +1,14 @@
 input.onButtonPressed(Button.A, function () {
-    Chance = randint(0, 40)
+    Chance = randint(0, 20)
 })
 let Chance = 0
 Chance = 0
 let Mogus = 0
+basic.forever(function () {
+    if (Mogus == 1) {
+    	
+    }
+})
 basic.forever(function () {
     if (Chance >= 0 && Chance < 5) {
         basic.showIcon(IconNames.Tortoise)
@@ -15,17 +20,12 @@ basic.forever(function () {
         basic.showIcon(IconNames.StickFigure)
     }
     if (Chance >= 15 && Chance < 20) {
-        Mogus = 1
-    }
-})
-basic.forever(function () {
-    if (Mogus == 1) {
         music.setTempo(40)
         music.setVolume(255)
         basic.showLeds(`
             . # # # .
-            # # # # #
-            # # # # #
+            . . . # #
+            . # # # #
             . # # # #
             . # . # .
             `)
@@ -62,6 +62,5 @@ basic.forever(function () {
         music.playTone(294, music.beat(BeatFraction.Quarter))
         music.playTone(262, music.beat(BeatFraction.Quarter))
         music.playTone(220, music.beat(BeatFraction.Whole))
-        Mogus = 0
     }
 })
