@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    Chance = randint(0, 20)
+    Chance = randint(0, 3)
 })
 let Chance = 0
 Chance = 0
@@ -10,16 +10,16 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (Chance >= 0 && Chance < 5) {
+    if (Chance >= 0 && Chance < 1) {
         basic.showIcon(IconNames.Tortoise)
     }
-    if (Chance >= 5 && Chance < 10) {
+    if (Chance >= 1 && Chance < 2) {
         basic.showIcon(IconNames.Square)
     }
-    if (Chance >= 10 && Chance < 15) {
+    if (Chance >= 2 && Chance < 3) {
         basic.showIcon(IconNames.StickFigure)
     }
-    if (Chance >= 15 && Chance < 20) {
+    if (Chance >= 4 && Chance < 4) {
         music.setTempo(40)
         music.setVolume(255)
         basic.showLeds(`
